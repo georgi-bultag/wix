@@ -1,0 +1,16 @@
+* {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	color: #000;
+}
+
+.page-section {
+	padding: 1.2rem 0;
+	background: lightblue;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
