@@ -138,7 +138,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
     Cols
 \* -------------------------- */
 
-.cols { margin: 0 -1.5rem; border-style: solid; border-color: #0065A9; background: #FFF; }
+.cols { margin: 0 -1.5rem; }
 .cols:after { content: ''; display: table; clear: both; line-height: 0; }
 
 .col { float: left; width: 100%; padding: 0 1.5rem; }

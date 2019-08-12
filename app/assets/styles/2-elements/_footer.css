@@ -1,9 +1,26 @@
 .footer {
 	&--left {
 		text-align: left;
+		font-size: 1rem;
+
+		@mixin min 768 {
+			text-align: left;
+			font-size: 2rem;
+		}
 	}
 
 	&--right {
 		text-align: right;
+		font-size: 1rem;
+
+		@mixin min 768 {
+			text-align: right;
+			font-size: 1.8rem;
+		}
 	}
+}
+
+.socdial {
+	max-width: 4rem;
+	height: 4rem;
 }

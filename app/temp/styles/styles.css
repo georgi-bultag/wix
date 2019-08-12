@@ -240,7 +240,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
     Cols
 \* -------------------------- */
 
-.cols { margin: 0 -1.5rem; border-style: solid; border-color: #0065A9; background: #FFF; }
+.cols { margin: 0 -1.5rem; }
 
 .cols:after { content: ''; display: table; clear: both; line-height: 0; }
 
@@ -431,7 +431,7 @@ section.nopadding {
 @media (min-width: 768px) {
 
 .title--pstyle {
-            font-size: 1.5rem;
+            font-size: 1.9rem;
             padding: 2rem 0 2rem 2rem
     }
   }
@@ -463,10 +463,31 @@ section.nopadding {
 
 .title--pglobal {
             line-height: 1.4;
-            font-size: 1.6rem;
-            padding-left: 5rem;
-            padding-right: 5rem;
+            font-size: 2.2rem;
+            padding-left: 3rem;
+            padding-right: 3rem;
             text-align: justify
+    }
+  }
+
+.title--italic {
+        font-style: italic;
+    }
+
+.title--h2global2 {
+        padding-top: 0;
+        text-align: center;
+        font-weight: 300;
+        font-size: 2.3rem;
+    }
+
+@media (min-width: 768px) {
+
+.title--h2global2 {
+            padding-top: 0;
+            text-align: center;
+            font-weight: 300;
+            font-size: 4.5rem
     }
   }
 
@@ -482,21 +503,65 @@ section.nopadding {
   }
 
 .pad {
-    
-    display: -webkit-inline-box;
-    
-    display: -ms-inline-flexbox;
-    
-    display: inline-flex;
+    padding-top: 1rem;
+}
+
+@media (min-width: 768px) {
+
+.pad {    
+        padding-top: 5rem
+}
+  }
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: var(--accent-color);
+}
+
+.underlink {
+    text-decoration: underline;
+    color: red;
 }
 
 .footer--left {
 		text-align: left;
+		font-size: 1rem;
 	}
+
+@media (min-width: 768px) {
+
+.footer--left {
+			text-align: left;
+			font-size: 2rem
+	}
+  }
 
 .footer--right {
 		text-align: right;
+		font-size: 1rem;
 	}
+
+@media (min-width: 768px) {
+
+.footer--right {
+			text-align: right;
+			font-size: 1.8rem
+	}
+  }
+
+.socdial {
+	max-width: 4rem;
+	height: 4rem;
+}
+
+.colbase {
+	 border-style: solid; 
+	 border-color: #0065A9; 
+	 background: #FFF;
+}
 
 .header {
 	position: fixed;
