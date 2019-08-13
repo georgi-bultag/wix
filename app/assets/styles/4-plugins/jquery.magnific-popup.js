@@ -10,7 +10,7 @@ if (typeof define === 'function' && define.amd) {
  factory(window.jQuery || window.Zepto); 
  } 
  }(function($) { 
-
+ 
 var CLOSE_EVENT = 'Close',
 	BEFORE_CLOSE_EVENT = 'BeforeClose',
 	AFTER_CLOSE_EVENT = 'AfterClose',

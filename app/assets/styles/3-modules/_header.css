@@ -2,7 +2,7 @@
 	position: fixed;
 	width: 100%;
 	background: #FFF;
-
+ 
 	@mixin min 768 {
 		position: relative;
 	}
