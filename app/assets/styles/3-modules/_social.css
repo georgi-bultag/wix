@@ -1,0 +1,22 @@
+.social-icons {
+	text-align: center;
+
+	@mixin min 768 {
+		text-align: right;
+	}
+
+}  
+.social-icons li {
+ 	display:inline-block;
+ 	list-style-type:none;
+ 	-webkit-user-select:none;
+ 	-moz-user-select:none;
+ }
+.social-icons li a {
+ 	border-bottom: none;
+ }
+.social-icons li img {
+	width:3rem;
+ 	height:3rem;
+ 	margin-right: 1rem;
+}
