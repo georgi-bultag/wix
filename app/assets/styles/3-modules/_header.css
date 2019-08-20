@@ -60,6 +60,10 @@
 		}
 	}
 
+	.pic3 {
+		padding-top: 5rem;
+	}
+
 	.title {
 		text-align: center;
 		line-height: 1.1;
@@ -116,7 +120,7 @@
 		}
 
 		ul {
-			position: absolute;
+			position: static;
 			top: 0;
 			left: 0;
 			width: 100%;
@@ -159,31 +163,69 @@
 				}
 			}
 
-			&:after {
-				background: green;
+			&.menu-item-has-children {
+				&:after {
+					content:'>';
+					position: absolute;
+					top: 50%;
+					right: 0;
+					display: inline-block;
+					transform: translateY(-50%) rotate(90deg) scale(1, 1.8);
+					padding: 3rem;
+					font-size: 1.3rem;
+					color: #999999;
+
+					@mixin min 768 {
+						padding-top: 1rem;
+						padding: .5rem;
+					}
+				}
+
+				&--expanded {
+					/*margin-bottom: 10rem;*/
+
+					.sub-menu {
+						position: absolute;
+						top: 100%;
+						left: 0;
+						z-index: 10;
+						display: block;
+						width: 100%;
+						height: 5rem;	
+						transition: all .5s ease;
+						/*background: red;*/
+						/*padding-top: 3.5rem;*/
+						background: rgba(65, 191, 255, 1);
+						border-radius: 1.5rem 1.5rem;
+						transform: translate(0);
+
+						@mixin min 768 {
+							padding-top: 0.5rem; 
+						}
+
+						li {
+							/*position: static;*/
+							display: flex;
+							align-items: center;
+							height: 4rem;
+							/*background: red;*/
+						}
+
+						a {
+							/*position: static;*/
+							color: #fff;
+						}
+					}
+				}
 			}
-		}
 
-		ul li ul {
-			visibility: hidden;
-			opacity: 0;
-			position: absolute;
-			transition: all 0.5s ease;
-			margin-top: 4.5rem;
-			left: 0;
-			display: none;
-		}
-
-		ul li:hover > ul,
-		ul li ul:hover {
-			visibility: visible;
-			opacity: 1;
-			display: block;
-		}
-
-		ul li ul li {
-			clear: both;
-			width: 100%;
+			.sub-menu {
+				/*display: none;*/
+				position: absolute;
+				background: rgba(65, 191, 255, 1);
+				border-radius: 1.5rem 1.5rem;
+				top: 5rem;	
+			}
 		}
 
 		a {
@@ -206,42 +248,9 @@
 				padding: 1rem 0;
 			}
 		}
-
-		.sub-menu {
-
-			@mixin min 768 {
-			border-radius: 0 0 1.5rem 1.5rem;
-			height: 4.5rem;
-			background: rgba(65, 191, 255, .50);
-			box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .2);
-			z-index: 5;
-			transform: translate(0);
-			height: auto;
-			display: block;
-			background-image: linear-gradient(to bottom, rgba(0,0,0,.02) 70%, rgba(0,0,0,.1));
-			transition: 1.2s;
-			}
-		} 
-
-		.sub-menu2 {
-
-			@mixin min 768 {
-			border-radius: 0 0 1.5rem 1.5rem;
-			height: 4.5rem;
-			background: rgba(65, 191, 255, .50);
-			box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .2);
-			z-index: 5;
-			transform: translate(0);
-			height: auto;
-			display: block;
-			background-image: linear-gradient(to bottom, rgba(0,0,0,.02) 70%, rgba(0,0,0,.1));
-			transition: 1.2s;
-			}
-		}
 	}
 
 	.toggle {
-		background: red;
 
 		@mixin min 768 {
 			display: none;
