@@ -4,7 +4,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
   <title>Ротари Клуб Харманли</title>
-  <link rel="stylesheet" href="temp/styles/styles.css">
+  <link rel="stylesheet" href="assets/styles/styles-8701bffa42.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script src="assets/scripts/scripts-55268787ce.js"></script>
+<link rel="shortcut icon" type="image/png" href="assets/images/favicon.png"/>
 </head>
 <body>
 <header class="header">
@@ -46,16 +53,14 @@
  					</li>
  					<li class="menu-item-has-children">
  						<a href="members.html">Членове</a>
-
  						<ul class="sub-menu">
  							<li>
- 								<a href="membership.html">Членство в Ротари</a>
+ 								<a href="membership.html" class="button">Членство в Ротари</a>
  							</li>
  						</ul>
- 					</li>
+ 					</li> 			
  					<li class="menu-item-has-children">
  						<a href="activity.html">Дейности</a>
-
  						<ul class="sub-menu">
  							<li>
  								<a href="news.html">Новини</a>
@@ -66,7 +71,7 @@
  						<a href="gallery.html">Галерия</a>
  					</li>
  					<li>
- 						<a href="#">Контакти</a>
+ 						<a href="contact.html">Контакти</a>
  					</li>
  				</ul>
  			</nav><!-- /.nav -->
@@ -108,7 +113,7 @@
 
 								<h2 class="title--h2style">Милко Милков</h2>
 
-								<p>e-mail: m_milkov731@abv.bg
+								<p class="title--h2style">e-mail: m_milkov731@abv.bg
 							</div><!-- /.col col--1of2 -->	
 						</div><!-- /.cols -->
 
@@ -125,7 +130,7 @@
 
 								<h2 class="title--h2style">Иван Стоянов</h2>
 
-								<p>e-mail: stoyanov_ip@abv.bg
+								<p class="title--h2style">e-mail: stoyanov_ip@abv.bg
 							</div><!-- /.col col--1of2 -->	
 						</div><!-- /.cols -->
 
@@ -173,12 +178,14 @@
 						</div><!-- /.cols -->
 					</div><!-- /.title--pglobal -->
 					
-					<picture class="pic2">
-		 				<source srcset="assets/images/international.png" media="(min-width:767px)">
-		 				<img src="assets/images/international.png" alt="Rotary World" />
-		 			</picture>
 					</div><!-- /.content -->
 				</div><!-- /.shell__mobile -->
+				<div class="internationalpic">
+						<picture class="internationalpic--pic">
+			 				<source srcset="assets/images/international.png" media="(min-width:767px)">
+			 				<img src="assets/images/international.png" alt="Rotary World" />
+			 			</picture>
+			 		</div><!-- /.internationalpic -->
 			</div><!-- /.shell -->
 		</section><!-- /.section -->
 	</div><!-- /.title--pglobal -->
@@ -191,11 +198,22 @@
 				© 2019 by Rotary Club "Harmanli"
 			</div><!-- /.col col--1of2 -->
 
-			<div class="col col--1of2 footer--right">					
-				Social icons
-			</div><!-- /.col col--1of2 -->
+			<div class="col col--1of2 footer--right">	
+				<div class="social-icons">
+
+					<a href="#" class="fa fa-facebook"></a>
+					<a href="#" class="fa fa-twitter"></a>
+					<a href="#" class="fa fa-google"></a>
+	 			</div><!-- /.social -->
+	 		</div><!-- /.col.col--1of2.footer--right -->
+			
+			<div class="col col--1of1 footer--right">
+				<div class="websiteby">
+					<a href="https://bultag.com/услуги/изработка-уеб-сайт/" target="_blank"><strong>Изработка на сайт</strong></a> и <a href="https://bultag.com/услуги/seo-оптимизация/" target="_blank">SEO</a> от <a href="https://bultag.com" target="_blank"><img class="websiteby" src="https://bultag.website/wp-content/uploads/logo-white@2x.png" alt="Бултаг Уеб Дизайн &amp; SEO" /></a>
+				</div><!-- /.websiteby -->
+			</div><!-- /.col col--1of1 footer--right -->
 		</div><!-- /.cols -->
-	</div>
+	</div><!-- /.shell -->
 </footer>
 </body>
 </html>

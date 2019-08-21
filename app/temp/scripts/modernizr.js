@@ -1,6 +1,6 @@
 /*!
  * modernizr v3.7.1
- * Build https://modernizr.com/download?-ruby-setclasses-dontmin
+ * Build https://modernizr.com/download?-setclasses-dontmin
  *
  * Copyright (c)
  *  Faruk Ates
@@ -229,95 +229,6 @@
   }
 
   ;
-
-  /**
-   * createElement is a convenience wrapper around document.createElement. Since we
-   * use createElement all over the place, this allows for (slightly) smaller code
-   * as well as abstracting away issues with creating elements in contexts other than
-   * HTML documents (e.g. SVG documents).
-   *
-   * @access private
-   * @function createElement
-   * @returns {HTMLElement|SVGElement} An HTML or SVG element
-   */
-  function createElement() {
-    if (typeof document.createElement !== 'function') {
-      // This is the case in IE7, where the type of createElement is "object".
-      // For this reason, we cannot call apply() as Object is not a Function.
-      return document.createElement(arguments[0]);
-    } else if (isSVG) {
-      return document.createElementNS.call(document, 'http://www.w3.org/2000/svg', arguments[0]);
-    } else {
-      return document.createElement.apply(document, arguments);
-    }
-  }
-
-  ;
-/*!
-{
-  "name": "ruby, rp, rt Elements",
-  "caniuse": "ruby",
-  "property": "ruby",
-  "tags": ["elem"],
-  "builderAliases": ["elem_ruby"],
-  "authors": ["Cătălin Mariș"],
-  "notes": [{
-    "name": "WHATWG Spec",
-    "href": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-ruby-element"
-  }]
-}
-!*/
-
-  Modernizr.addTest('ruby', function() {
-
-    var ruby = createElement('ruby');
-    var rt = createElement('rt');
-    var rp = createElement('rp');
-    var displayStyleProperty = 'display';
-    // 'fontSize' - because it`s only used for IE6 and IE7
-    var fontSizeStyleProperty = 'fontSize';
-
-    ruby.appendChild(rp);
-    ruby.appendChild(rt);
-    docElement.appendChild(ruby);
-
-    // browsers that support <ruby> hide the <rp> via "display:none"
-    if (getStyle(rp, displayStyleProperty) === 'none' ||                                                        // for non-IE browsers
-         // but in IE browsers <rp> has "display:inline" so, the test needs other conditions:
-         getStyle(ruby, displayStyleProperty) === 'ruby' && getStyle(rt, displayStyleProperty) === 'ruby-text' || // for IE8+
-         getStyle(rp, fontSizeStyleProperty) === '6pt' && getStyle(rt, fontSizeStyleProperty) === '6pt') {       // for IE6 & IE7
-
-      cleanUp();
-      return true;
-
-    } else {
-      cleanUp();
-      return false;
-    }
-
-    function getStyle(element, styleProperty) {
-      var result;
-
-      if (window.getComputedStyle) {     // for non-IE browsers
-        result = document.defaultView.getComputedStyle(element, null).getPropertyValue(styleProperty);
-      } else if (element.currentStyle) { // for IE
-        result = element.currentStyle[styleProperty];
-      }
-
-      return result;
-    }
-
-    function cleanUp() {
-      docElement.removeChild(ruby);
-      // the removed child node still exists in memory, so ...
-      ruby = null;
-      rt = null;
-      rp = null;
-    }
-
-  });
-
-
 
   // Run each test
   testRunner();

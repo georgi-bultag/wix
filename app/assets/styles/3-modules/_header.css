@@ -143,6 +143,11 @@
 			justify-content: center;
 			align-items: center;
 
+			@mixin min 768 {
+				display: block;
+ 				transition-duration: 0.5s;
+			}
+
 			:hover {
 				color: #FFF;
 				background: rgba(65, 191, 255, 1);
@@ -164,6 +169,7 @@
 			}
 
 			&.menu-item-has-children {
+			
 				&:after {
 					content:'>';
 					position: absolute;
@@ -176,9 +182,10 @@
 					color: #999999;
 
 					@mixin min 768 {
+						display: none;
 						padding-top: 1rem;
 						padding: .5rem;
-					}
+					}		
 				}
 
 				&--expanded {
@@ -191,16 +198,17 @@
 						z-index: 10;
 						display: block;
 						width: 100%;
-						height: 5rem;	
+						height: 4rem;	
 						transition: all .5s ease;
 						/*background: red;*/
 						/*padding-top: 3.5rem;*/
-						background: rgba(65, 191, 255, 1);
+						/*background: rgba(65, 191, 255, 1);*/
 						border-radius: 1.5rem 1.5rem;
 						transform: translate(0);
 
 						@mixin min 768 {
-							padding-top: 0.5rem; 
+							padding-top: 0.5rem;
+							height: 15rem; 
 						}
 
 						li {
@@ -218,6 +226,8 @@
 					}
 				}
 			}
+
+			
 
 			.sub-menu {
 				/*display: none;*/
@@ -250,6 +260,41 @@
 		}
 	}
 
+	li {
+		display: block;
+		transition-duration: 0.5s;
+	}
+
+	li:hover {
+		cursor: pointer;	
+	}
+
+	ul li ul {
+		visibility: hidden;
+		opacity: 0;
+		position: absolute;
+		transition: all 1s ease;
+		margin-top: 0rem;
+		left: 0;
+		display: none;
+	}
+
+	ul li:hover > ul,
+	ul li ul:hover {
+		visibility: visible;
+		opacity: 1;
+		display: block;
+	}
+
+	ul li ul li {
+		clear: both;
+		width: 100%;
+	}
+
+	.button {
+		background: rgba(65, 191, 255, 1);
+		border-radius: 1.5rem 1.5rem;
+	}
 	.toggle {
 
 		@mixin min 768 {

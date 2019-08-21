@@ -148,7 +148,6 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 .col--1of5 { width: 100%; }
 .colpic { display: flex; justify-content: center; text-align: center; }
 
-
 @mixin min 768 {
     .col--1of2 { width: 50%; }
     .col--1of3 { width: 33.33%; }
