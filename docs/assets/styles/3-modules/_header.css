@@ -208,7 +208,7 @@
 
 						@mixin min 768 {
 							padding-top: 0.5rem;
-							height: 15rem; 
+							height: 6rem; 
 						}
 
 						li {
@@ -231,10 +231,14 @@
 
 			.sub-menu {
 				/*display: none;*/
+				top: 5rem;	
 				position: absolute;
 				background: rgba(65, 191, 255, 1);
 				border-radius: 1.5rem 1.5rem;
-				top: 5rem;	
+
+				@mixin max 768 {
+					display: none;
+				}
 			}
 		}
 
@@ -292,6 +296,7 @@
 	}
 
 	.button {
+		top: 5rem;
 		background: rgba(65, 191, 255, 1);
 		border-radius: 1.5rem 1.5rem;
 	}
