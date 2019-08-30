@@ -9,66 +9,6 @@
         font-size: 4rem;
     }
 
-  /*  &--h2style {
-        font-weight: 700;
-        margin: 0;
-        padding: 1.5rem;
-        font-size: 1rem;
-        font-style: italic;
-        letter-spacing: .5rem;
-        text-align: center;
-
-        @mixin min 768 {
-            font-weight: 300;
-            margin: 0;
-            padding: 6.5rem;
-            font-size: 2.4rem;
-            font-style: italic;
-            letter-spacing: 1rem;
-            text-align: center;
-        }
-    } 
-
-    &--pstyle {
-        line-height: 1.65;
-        font-size: 1.6rem;
-        margin: 1.8rem 0;
-        padding: 0 6rem 0 6rem;
-
-        @mixin min 768 {
-            font-size: 1.9rem;
-            padding: 2rem 0 2rem 2rem;
-        }
-    }
-
-    &--h2global {
-        padding-top: 5rem;
-        text-align: center;
-        font-weight: 300;
-        font-size: 2.3rem;
-
-        @mixin min 768 {
-            padding-top: 0;
-            text-align: center;
-            font-weight: 300;
-            font-size: 4.5rem;
-        }
-    }
-
-    &--pglobal {
-        padding-left: 2rem;
-        padding-right: 2rem;
-        text-align: justify;
-
-        @mixin min 768 {
-            line-height: 1.4;
-            font-size: 2.2rem;
-            padding-left: 3rem;
-            padding-right: 3rem;
-            text-align: justify;
-        }
-    }*/
-
     &--italic {
         font-style: italic;
     }
@@ -110,6 +50,11 @@
 
     @mixin min 768 {
         font-size: 4.5rem;
+    }
+
+    &--red {
+        font-style: italic;
+        color: red;
     }
 }
 

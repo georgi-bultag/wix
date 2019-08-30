@@ -1,0 +1,14 @@
+.membership {
+	padding-top: 0;
+
+	h3 {
+		padding-top: 0; 
+    	font-weight: 300;
+    	font-size: 2.5rem;
+    	text-align: center;
+
+    	@mixin min 768 {
+    		font-size: 4.5rem;
+    	}
+	}
+}
