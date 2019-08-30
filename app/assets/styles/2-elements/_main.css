@@ -1,0 +1,41 @@
+.main {
+	padding-top: 5rem;
+}
+
+h1 { 
+	padding-top: 2rem;
+	text-align: center;
+}
+
+p {
+	padding-left: 1rem;
+	font-size: 2rem;
+
+	@mixin min 768 {
+		font-size: 2.5rem;
+	}
+}
+
+.pad {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    @mixin min 768 {    
+        padding-top: 5rem;
+        padding-bottom: 2rem;
+    }
+}
+
+.pad0 {
+    padding-top: 1rem;
+
+    @mixin min 768 {    
+        padding-top: 0;
+    }
+}
+
+.nopad {
+    padding: 0;
+    margin: 0.1rem;
+    margin-bottom: 1rem;
+}

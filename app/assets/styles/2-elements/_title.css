@@ -1,6 +1,15 @@
 .title {
+    padding-top: 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.7rem;
 
-    &--h2style {
+    @mixin min 768 {
+        font-size: 4rem;
+    }
+
+  /*  &--h2style {
         font-weight: 700;
         margin: 0;
         padding: 1.5rem;
@@ -22,7 +31,7 @@
 
     &--pstyle {
         line-height: 1.65;
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         margin: 1.8rem 0;
         padding: 0 6rem 0 6rem;
 
@@ -57,9 +66,8 @@
             padding-left: 3rem;
             padding-right: 3rem;
             text-align: justify;
-
         }
-    }
+    }*/
 
     &--italic {
         font-style: italic;
@@ -94,162 +102,28 @@
     }
 }
 
-.map {
-    width: 100%;
-    height: 25rem;
-    padding-bottom: 1rem;
+.subtitle {
+    padding-top: 0; 
+    font-weight: 300;
+    font-size: 2.5rem;
+    text-align: center;
 
     @mixin min 768 {
-        width: 50%;
-        height: 52rem;
+        font-size: 4.5rem;
     }
 }
 
-.contact {
-    margin-top: 1rem;
+.boldTitle {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-size: 3rem;
 
-    &--left {
-        width: 93%;
-        padding-left: 1.5rem;
-        padding-bottom: 1rem;
-
-        @mixin min 768 {
-            float: left;
-            width: 21rem;
-        }
-    }
-
-    &--right {
-        width: 100%;
-        height: 14.9rem;
-        padding-left: 1rem;
-        padding-top: 1rem;
-
-        @mixin min 768 {
-            float: left;
-            width: 23rem;
-            height: 14.9rem;
-        }
-    }
-
-    &--block {
-        width: 100%;
-        height: 4.3rem;
-        padding-left: 1rem;
-    }
-
-    &--btn {
-        padding-left: 3rem;
-
-        @mixin min 768 {
-            text-align: left;
-            /*padding-top: 55rem;*/
-            padding-left: 81rem;
-        }
-    }
-
-    &--btnstyle {
-        width: 18rem;
-        height: 4rem;
-        background-color: rgba(0, 101, 169, 1);
-        color: #FFF;
-        font-size: 2rem;
-
-        @mixin min 768 {
-            width: 12rem;
-            height: 4rem;
-            background-color: rgba(0, 101, 169, 1);
-            color: #FFF;
-            font-size: 2rem;
-        }
-    }
-}
-
-.linked {
-    /*position: relative;*/
-    top: 0;
-    /*z-index: 5;*/
-    transform: translate(0);
-    height: 2rem;
-    /*display: block;*/
-    margin-bottom: 3.5rem;
-    width: 60%;
-    box-shadow: 0 1rem 0 rgba(214, 69, 65, 1);
-    
     @mixin min 768 {
-        width: 30%;
-        height: 3rem;
+        font-size: 5rem;
     }
 }
 
 .blue {
     color: var(--accent-color);
 }
-
-.listing {
-    padding-left: 2rem;
-
-    @mixin min 768 {
-        padding-left: 5rem;
-    }
-}
-
-.pad {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-
-    @mixin min 768 {    
-        padding-top: 5rem;
-        padding-bottom: 2rem;
-    }
-}
-
-.pad0 {
-    padding-top: 1rem;
-
-    @mixin min 768 {    
-        padding-top: 0;
-    }
-}
-
-.nopad {
-    padding: 0;
-    margin: 0.1rem;
-    margin-bottom: 1rem;
-}
-
-.galleryimg {
-
-    @mixin min 768 {
-    object-fit: cover;
-    width: 100%;
-    height: 35.5rem;
-    }
-}
-
-
-
-
-.internationalpic {
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-
-    @mixin min 768 {
-        width: 20%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    &--pic {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-
-        @mixin min 768 {
-            /*position: absolute;*/
-            /*width: 20%;*/
-        }
-    }
-}
-

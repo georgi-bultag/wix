@@ -1,0 +1,23 @@
+.index {
+	p {
+		text-align: justify;
+	}
+
+	h2 {
+		font-style: italic;
+	}
+}
+
+.linked {
+    top: 0;
+    transform: translate(0);
+    height: 2rem;
+    margin-bottom: 3.5rem;
+    width: 60%;
+    box-shadow: 0 1rem 0 rgba(214, 69, 65, 1);
+    
+    @mixin min 768 {
+        width: 30%;
+        height: 3rem;
+    }
+}

@@ -1,4 +1,12 @@
 @import "nav-trigger";
 @import "_title";
 @import "_footer";
-@import "_colbase"; 
+@import "_colbase";
+@import "_members";
+@import "_main";
+@import "_index";
+@import "_contacts";
+@import "_about";
+@import "_gallery";
+@import "_activity";
+@import "_news";

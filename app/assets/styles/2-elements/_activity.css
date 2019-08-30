@@ -1,0 +1,76 @@
+.activity {
+	padding-top: 2rem;
+	padding-left: 1rem;
+	font-size: 2rem;
+
+	@mixin min 768 {
+		font-size: 2.5rem;
+	}
+
+	.title {
+		font-size: 4.5rem;
+	}
+
+	.year{
+		text-align: center;
+		
+	}
+
+	.info {
+		text-align: left;
+	}
+}
+
+.activities {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	@mixin min 768 {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+}
+
+.actions {
+	padding-bottom: 3rem;
+	width: 100%;
+
+	@mixin min 768 {
+		width: 48%;
+	}
+}
+
+.titleYear {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--accent-color);
+
+    @mixin min 768 {
+        font-size: 4rem;
+    }
+}
+
+.subtitleRed {
+	padding-top: 0; 
+    font-weight: 300;
+    font-size: 2.7rem;
+    text-align: center;
+    font-style: italic;
+    color: #FF3333;
+
+    @mixin min 768 {
+        font-size: 4.5rem;
+    }
+}
+
+p {
+	padding-left: 1rem;
+	font-size: 2rem;
+
+	@mixin min 768 {
+		font-size: 2.5rem;
+	}
+}
